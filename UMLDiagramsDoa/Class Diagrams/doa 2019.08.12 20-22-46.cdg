@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="doa">
+  <ClassDiagramComponents>
+    <Class name="BloodManagement" package="bloodmanagement" visibility="public" xPosition="4559.0" yPosition="1683.0">
+      <Fields>
+        <Field name="stage" type="Stage" visibility="private" isStatic="true"/>
+        <Field name="main" type="Scene" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="mudarTela" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="s"/>
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXMLAtualizarDoadorExistenteController" package="bloodmanagement" visibility="public" xPosition="4514.0" yPosition="1978.0">
+      <Fields>
+        <Field name="txtbAdc" type="TextArea" visibility="private"/>
+        <Field name="txtPeso" type="TextField" visibility="private"/>
+        <Field name="txtAltura" type="TextField" visibility="private"/>
+        <Field name="cbDoador" type="CheckBox" visibility="private"/>
+        <Field name="cbCheckup" type="CheckBox" visibility="private"/>
+        <Field name="cbCheckup2" type="CheckBox" visibility="private"/>
+        <Field name="lblNomeDoador" type="Label" visibility="private"/>
+        <Field name="peso" type="double" visibility="private"/>
+        <Field name="adicionais" type="String" visibility="private"/>
+        <Field name="ehDoador" type="boolean" visibility="private"/>
+        <Field name="flag" type="boolean" visibility="private" isStatic="true"/>
+        <Field name="flagAltura" type="boolean" visibility="private"/>
+        <Field name="cpf_analize" type="String" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setarCPFvalidar" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="voltarTelaInincial" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="setarFlag" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="atualizarDados" returnType="void" visibility="private"/>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="limparCampos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXMLCadastrar_UserController" package="bloodmanagement" visibility="public" xPosition="60.0" yPosition="33.0">
+      <Fields>
+        <Field name="sangue" type="List&lt;TipoSangue&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsSangue" type="ObservableList&lt;TipoSangue&gt;" visibility="private"/>
+        <Field name="rh" type="List&lt;FatorRH&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsRh" type="ObservableList&lt;FatorRH&gt;" visibility="private"/>
+        <Field name="estados" type="List&lt;Estados&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsEstados" type="ObservableList&lt;Estados&gt;" visibility="private"/>
+        <Field name="txtNome" type="TextField" visibility="private"/>
+        <Field name="txtCPF" type="TextField" visibility="private"/>
+        <Field name="txtRG" type="TextField" visibility="private"/>
+        <Field name="txtOrgao" type="TextField" visibility="private"/>
+        <Field name="spUF" type="ChoiceBox&lt;Estados&gt;" visibility="private"/>
+        <Field name="dpNasc" type="DatePicker" visibility="private"/>
+        <Field name="txtAltura" type="TextField" visibility="private"/>
+        <Field name="chDoador" type="CheckBox" visibility="private"/>
+        <Field name="txtPeso" type="TextField" visibility="private"/>
+        <Field name="cbTipo" type="ChoiceBox&lt;TipoSangue&gt;" visibility="private"/>
+        <Field name="cbRH" type="ChoiceBox&lt;FatorRH&gt;" visibility="private"/>
+        <Field name="chCheckup" type="CheckBox" visibility="private"/>
+        <Field name="txtTel" type="TextField" visibility="private"/>
+        <Field name="txtbAdc" type="TextArea" visibility="private"/>
+        <Field name="chCheckup2" type="CheckBox" visibility="private"/>
+        <Field name="peso" type="double" visibility="private"/>
+        <Field name="cpf" type="long" visibility="private"/>
+        <Field name="sistema" type="LocalDate" visibility="private" isFinal="true"/>
+        <Field name="nascimento" type="LocalDate" visibility="private"/>
+        <Field name="flagPeso" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="voltarTelaInincial" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="cadastrarDoador" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="carregarTiposSangue" returnType="void" visibility="public"/>
+        <Method name="carregarFatoresRH" returnType="void" visibility="public"/>
+        <Method name="carregarUF" returnType="void" visibility="public"/>
+        <Method name="limparCampos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXMLRetirarBolsasController" package="bloodmanagement" visibility="public" xPosition="527.0" yPosition="1167.0">
+      <Fields>
+        <Field name="lblAMenos" type="Label" visibility="private"/>
+        <Field name="txtQTD" type="TextField" visibility="private"/>
+        <Field name="cbTipo" type="ChoiceBox&lt;TipoSangue&gt;" visibility="private"/>
+        <Field name="cbRH" type="ChoiceBox&lt;FatorRH&gt;" visibility="private"/>
+        <Field name="quantidadeBanco" type="int" visibility="private"/>
+        <Field name="sangue" type="List&lt;TipoSangue&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsSangue" type="ObservableList&lt;TipoSangue&gt;" visibility="private"/>
+        <Field name="rh" type="List&lt;FatorRH&gt;" visibility="private" isFinal="true"/>
+        <Field name="obsRh" type="ObservableList&lt;FatorRH&gt;" visibility="private"/>
+        <Field name="sAMais" type="Sangue" visibility="package"/>
+        <Field name="sBMais" type="Sangue" visibility="package"/>
+        <Field name="sABMais" type="Sangue" visibility="package"/>
+        <Field name="sOMais" type="Sangue" visibility="package"/>
+        <Field name="sAMenos" type="Sangue" visibility="package"/>
+        <Field name="sBMenos" type="Sangue" visibility="package"/>
+        <Field name="sABMenos" type="Sangue" visibility="package"/>
+        <Field name="sOMenos" type="Sangue" visibility="package"/>
+        <Field name="AMais" type="BolsaDeSangue" visibility="package"/>
+        <Field name="flagQtd" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="voltarTelaInincial" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="retirarBolsas" returnType="void" visibility="private"/>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="carregarTiposSangue" returnType="void" visibility="public"/>
+        <Method name="carregarFatoresRH" returnType="void" visibility="public"/>
+        <Method name="carregarQuantidades" returnType="void" visibility="public"/>
+        <Method name="carregarBolsas" returnType="void" visibility="public"/>
+        <Method name="limparCampos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXMLTelaPrincipalController" package="bloodmanagement" visibility="public" xPosition="4485.0" yPosition="786.0">
+      <Fields>
+        <Field name="image2" type="ImageView" visibility="private"/>
+        <Field name="image1" type="ImageView" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="abrirTelaCadastro" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="abrirTelaRetirada" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="abrirTelaAdd" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="abrirTelaUpdate" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="sairPrograma" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXMLValidarUserController" package="bloodmanagement" visibility="public" xPosition="2296.0" yPosition="1861.0">
+      <Fields>
+        <Field name="txtCPF" type="TextField" visibility="private"/>
+        <Field name="cpf_analisar" type="long" visibility="private" isStatic="true"/>
+        <Field name="ind" type="Individuo" visibility="package"/>
+        <Field name="flagCPF" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="voltarTelaInincial" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="verificarCPF" returnType="void" visibility="private"/>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estados" package="bloodmanagementmodels" visibility="public" xPosition="542.0" yPosition="274.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FatorRH" package="bloodmanagementmodels" visibility="public" xPosition="527.0" yPosition="577.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TipoSangue" package="bloodmanagementmodels" visibility="public" xPosition="881.0" yPosition="61.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nome"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BolsaDeSangue" package="BolsaDeSangue" visibility="public" xPosition="2362.0" yPosition="406.0">
+      <Fields>
+        <Field name="dao" type="BolsaDeSangueDAO" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="sangue_id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="sangue_id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="BolsaDeSangueDAO" visibility="public"/>
+        <Method name="setDao" returnType="void" visibility="public">
+          <Argument type="BolsaDeSangueDAO" name="dao"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getSangue_id" returnType="int" visibility="public"/>
+        <Method name="setSangue_id" returnType="void" visibility="public">
+          <Argument type="int" name="sangue_id"/>
+        </Method>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;Object&gt;" visibility="public"/>
+        <Method name="retirada" returnType="void" visibility="public">
+          <Argument type="int" name="sangue_id"/>
+          <Argument type="int" name="qtd"/>
+        </Method>
+        <Method name="quantidade" returnType="int" visibility="public">
+          <Argument type="int" name="sangue_id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BolsaDeSangueDAO" package="BolsaDeSangue" visibility="public" xPosition="3525.0" yPosition="236.0">
+      <Fields>
+        <Field name="table" type="String" visibility="protected"/>
+        <Field name="baseName" type="String" visibility="private"/>
+        <Field name="database" type="DBConnection" visibility="private"/>
+        <Field name="bolsaDeSangue" type="BolsaDeSangue" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BolsaDeSangue" name="e"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="retirada" returnType="void" visibility="public">
+          <Argument type="int" name="sangue_id"/>
+          <Argument type="int" name="qtd"/>
+        </Method>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;Object&gt;" visibility="public"/>
+        <Method name="quantidade" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="int" name="sangue_id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DumpMySQL" package="database" visibility="public" xPosition="4347.0" yPosition="258.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="dump" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="arquivo"/>
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="senha"/>
+          <Argument type="String" name="base"/>
+          <Argument type="String" name="tabelas"/>
+        </Method>
+        <Method name="dumpAll" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="arquivo"/>
+          <Argument type="String" name="usuario"/>
+          <Argument type="String" name="senha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="StreamGobbler" package="database" visibility="public" xPosition="4448.0" yPosition="483.0">
+      <Fields>
+        <Field name="is" type="InputStream" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="fw" type="FileWriter" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="InputStream" name="is"/>
+          <Argument type="String" name="type"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="InputStream" name="is"/>
+          <Argument type="String" name="type"/>
+          <Argument type="File" name="file"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MySQLConnection" package="database" visibility="public" xPosition="3525.0" yPosition="1625.0">
+      <Fields>
+        <Field name="lastQuery" type="String" visibility="private"/>
+        <Field name="conexao" type="Connection" visibility="private"/>
+        <Field name="HOST" type="String" visibility="private"/>
+        <Field name="PORT" type="String" visibility="private"/>
+        <Field name="USER" type="String" visibility="private"/>
+        <Field name="PASS" type="String" visibility="private"/>
+        <Field name="BASE" type="String" visibility="private"/>
+        <Field name="DRIVER" type="String" visibility="private"/>
+        <Field name="PARAMETERS" type="String" visibility="private"/>
+        <Field name="URL" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="base"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="connect" returnType="void" visibility="private"/>
+        <Method name="insert" returnType="void" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String[]" name="fields"/>
+          <Argument type="String[]" name="values"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String[]" name="fields"/>
+          <Argument type="String[]" name="values"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String[]" name="fields"/>
+          <Argument type="String[]" name="values"/>
+        </Method>
+        <Method name="createTable" returnType="void" visibility="public">
+          <Argument type="String" name="tableName"/>
+          <Argument type="String" name="template"/>
+        </Method>
+        <Method name="command" returnType="void" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="query" returnType="ArrayList&lt;ArrayList&lt;String&gt;&gt;" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;ArrayList&lt;String&gt;&gt;" visibility="public">
+          <Argument type="String" name="table"/>
+        </Method>
+        <Method name="find" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="find" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getLastQuery" returnType="String" visibility="public"/>
+        <Method name="export" returnType="void" visibility="public">
+          <Argument type="String" name="fileName"/>
+          <Argument type="String" name="base"/>
+        </Method>
+        <Method name="acquire" returnType="void" visibility="public">
+          <Argument type="String" name="fileName"/>
+          <Argument type="int" name="project_id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ScriptRunner" package="database" visibility="public" xPosition="4329.0" yPosition="1105.0">
+      <Fields>
+        <Field name="DEFAULT_DELIMITER" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="delimP" type="Pattern" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="connection" type="Connection" visibility="private" isFinal="true"/>
+        <Field name="stopOnError" type="boolean" visibility="private" isFinal="true"/>
+        <Field name="autoCommit" type="boolean" visibility="private" isFinal="true"/>
+        <Field name="logWriter" type="PrintWriter" visibility="private"/>
+        <Field name="errorLogWriter" type="PrintWriter" visibility="private"/>
+        <Field name="delimiter" type="String" visibility="private"/>
+        <Field name="fullLineDelimiter" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Connection" name="connection"/>
+          <Argument type="boolean" name="autoCommit"/>
+          <Argument type="boolean" name="stopOnError"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setDelimiter" returnType="void" visibility="public">
+          <Argument type="String" name="delimiter"/>
+          <Argument type="boolean" name="fullLineDelimiter"/>
+        </Method>
+        <Method name="setLogWriter" returnType="void" visibility="public">
+          <Argument type="PrintWriter" name="logWriter"/>
+        </Method>
+        <Method name="setErrorLogWriter" returnType="void" visibility="public">
+          <Argument type="PrintWriter" name="errorLogWriter"/>
+        </Method>
+        <Method name="runScript" returnType="void" visibility="public">
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="runScript" returnType="void" visibility="private">
+          <Argument type="Connection" name="conn"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="execCommand" returnType="void" visibility="private">
+          <Argument type="Connection" name="conn"/>
+          <Argument type="StringBuffer" name="command"/>
+          <Argument type="LineNumberReader" name="lineReader"/>
+        </Method>
+        <Method name="getDelimiter" returnType="String" visibility="private"/>
+        <Method name="print" returnType="void" visibility="private">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="println" returnType="void" visibility="private">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="printlnError" returnType="void" visibility="private">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="flush" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Individuo" package="Individuo" visibility="public" xPosition="2802.0" yPosition="1646.0">
+      <Fields>
+        <Field name="dao" type="IndividuoDAO" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cpf" type="String" visibility="private"/>
+        <Field name="rg" type="String" visibility="private"/>
+        <Field name="orgaoExp" type="String" visibility="private"/>
+        <Field name="dataNascimento" type="LocalDate" visibility="private"/>
+        <Field name="uf" type="String" visibility="private"/>
+        <Field name="doadorMedula" type="Boolean" visibility="private"/>
+        <Field name="altura" type="Double" visibility="private"/>
+        <Field name="peso" type="Double" visibility="private"/>
+        <Field name="checkUp" type="Boolean" visibility="private"/>
+        <Field name="telefone" type="String" visibility="private"/>
+        <Field name="observacoes" type="String" visibility="private"/>
+        <Field name="sangue_id" type="int" visibility="private"/>
+        <Field name="formatador" type="DateTimeFormatter" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getSangue_id" returnType="int" visibility="public"/>
+        <Method name="setSangue_id" returnType="void" visibility="public">
+          <Argument type="int" name="sangue_id"/>
+        </Method>
+        <Method name="getDao" returnType="IndividuoDAO" visibility="public"/>
+        <Method name="setDao" returnType="void" visibility="public">
+          <Argument type="IndividuoDAO" name="dao"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getRg" returnType="String" visibility="public"/>
+        <Method name="setRg" returnType="void" visibility="public">
+          <Argument type="String" name="rg"/>
+        </Method>
+        <Method name="getOrgaoExp" returnType="String" visibility="public"/>
+        <Method name="setOrgaoExp" returnType="void" visibility="public">
+          <Argument type="String" name="orgaoExp"/>
+        </Method>
+        <Method name="getDataNascimento" returnType="LocalDate" visibility="public"/>
+        <Method name="setDataNascimento" returnType="void" visibility="public">
+          <Argument type="String" name="dataNascimento"/>
+        </Method>
+        <Method name="getUf" returnType="String" visibility="public"/>
+        <Method name="setUf" returnType="void" visibility="public">
+          <Argument type="String" name="uf"/>
+        </Method>
+        <Method name="getDoadorMedula" returnType="Boolean" visibility="public"/>
+        <Method name="setDoadorMedula" returnType="void" visibility="public">
+          <Argument type="Boolean" name="doadorMedula"/>
+        </Method>
+        <Method name="getAltura" returnType="Double" visibility="public"/>
+        <Method name="setAltura" returnType="void" visibility="public">
+          <Argument type="Double" name="altura"/>
+        </Method>
+        <Method name="getPeso" returnType="Double" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="Double" name="peso"/>
+        </Method>
+        <Method name="getCheckUp" returnType="Boolean" visibility="public"/>
+        <Method name="setCheckUp" returnType="void" visibility="public">
+          <Argument type="Boolean" name="checkUp"/>
+        </Method>
+        <Method name="getTelefone" returnType="String" visibility="public"/>
+        <Method name="setTelefone" returnType="void" visibility="public">
+          <Argument type="String" name="telefone"/>
+        </Method>
+        <Method name="getObservacoes" returnType="String" visibility="public"/>
+        <Method name="setObservacoes" returnType="void" visibility="public">
+          <Argument type="String" name="observacoes"/>
+        </Method>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="find" returnType="Individuo" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;Object&gt;" visibility="public"/>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="formatDate" returnType="String" visibility="public">
+          <Argument type="String" name="date"/>
+        </Method>
+        <Method name="getCheckUp2" returnType="Boolean" visibility="public"/>
+        <Method name="setCheckUp2" returnType="void" visibility="public">
+          <Argument type="Boolean" name="checkUp2"/>
+        </Method>
+        <Method name="getFormatador" returnType="DateTimeFormatter" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="IndividuoDAO" package="Individuo" visibility="public" xPosition="2787.0" yPosition="49.0">
+      <Fields>
+        <Field name="table" type="String" visibility="protected"/>
+        <Field name="baseName" type="String" visibility="private"/>
+        <Field name="database" type="DBConnection" visibility="private"/>
+        <Field name="individuo" type="Individuo" visibility="private"/>
+        <Field name="formatador" type="DateTimeFormatter" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Individuo" name="e"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="find" returnType="Individuo" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="mapToInviduo" returnType="void" visibility="public">
+          <Argument type="Individuo" name="e"/>
+          <Argument type="ArrayList&lt;String&gt;" name="linha"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;Object&gt;" visibility="public"/>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Sangue" package="Sangue" visibility="public" xPosition="1450.0" yPosition="1294.0">
+      <Fields>
+        <Field name="dao" type="SangueDAO" visibility="private"/>
+        <Field name="tipoSanguineo" type="String" visibility="private"/>
+        <Field name="fatorRh" type="String" visibility="private"/>
+        <Field name="Id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="SangueDAO" visibility="public"/>
+        <Method name="setDao" returnType="void" visibility="public">
+          <Argument type="SangueDAO" name="dao"/>
+        </Method>
+        <Method name="getTipoSanguineo" returnType="String" visibility="public"/>
+        <Method name="setTipoSanguineo" returnType="void" visibility="public">
+          <Argument type="String" name="tipoSanguineo"/>
+        </Method>
+        <Method name="getFatorRh" returnType="String" visibility="public"/>
+        <Method name="setFatorRh" returnType="void" visibility="public">
+          <Argument type="String" name="fatorRh"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="Id"/>
+        </Method>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;Object&gt;" visibility="public"/>
+        <Method name="initDb" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SangueDAO" package="Sangue" visibility="public" xPosition="2029.0" yPosition="1274.0">
+      <Fields>
+        <Field name="table" type="String" visibility="protected"/>
+        <Field name="baseName" type="String" visibility="private"/>
+        <Field name="database" type="DBConnection" visibility="private"/>
+        <Field name="sangue" type="Sangue" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Sangue" name="e"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="String" name="tipoSanguineo"/>
+          <Argument type="String" name="fatorRh"/>
+        </Method>
+        <Method name="getSangue" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="tipoSanguineo"/>
+          <Argument type="String" name="fatorRh"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;Object&gt;" visibility="public"/>
+        <Method name="mapToSangue" returnType="void" visibility="private">
+          <Argument type="Sangue" name="s"/>
+          <Argument type="ArrayList&lt;String&gt;" name="result"/>
+        </Method>
+        <Method name="find" returnType="Object" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="DBConnection" package="database" visibility="public" xPosition="3525.0" yPosition="1021.0">
+      <Methods>
+        <Method name="find" returnType="ArrayList&lt;String&gt;" visibility="package">
+          <Argument type="String" name="table"/>
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="find" returnType="ArrayList&lt;String&gt;" visibility="package">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="insert" returnType="void" visibility="package">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="fields"/>
+          <Argument type="String" name="values"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="package">
+          <Argument type="String" name="table"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="fields"/>
+          <Argument type="String" name="values"/>
+        </Method>
+        <Method name="update" returnType="void" visibility="package">
+          <Argument type="String" name="table"/>
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="fields"/>
+          <Argument type="String" name="values"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="String" name="table"/>
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="command" returnType="void" visibility="package">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;ArrayList&lt;String&gt;&gt;" visibility="package">
+          <Argument type="String" name="table"/>
+        </Method>
+        <Method name="query" returnType="ArrayList&lt;ArrayList&lt;String&gt;&gt;" visibility="package">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="getLastQuery" returnType="String" visibility="package"/>
+        <Method name="createTable" returnType="void" visibility="package">
+          <Argument type="String" name="tableName"/>
+          <Argument type="String" name="template"/>
+        </Method>
+        <Method name="export" returnType="void" visibility="package">
+          <Argument type="String" name="fileName"/>
+          <Argument type="String" name="base"/>
+        </Method>
+        <Method name="acquire" returnType="void" visibility="public">
+          <Argument type="String" name="fileName"/>
+          <Argument type="int" name="base_id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="IDAO" package="model" visibility="public" xPosition="1852.0" yPosition="129.0">
+      <Methods>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="package"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="find" returnType="E" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="get" returnType="ArrayList&lt;E&gt;" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="database" source="BolsaDeSangue.BolsaDeSangueDAO" target="database.DBConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Sangue.Sangue" target="model.IDAO"/>
+    <HasRelation name="sangue" source="bloodmanagement.FXMLRetirarBolsasController" target="bloodmanagementmodels.TipoSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;TipoSangue&gt;"/>
+    <HasRelation name="sOMenos" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rh" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.FatorRH" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;FatorRH&gt;"/>
+    <HasRelation name="estados" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.Estados" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Estados&gt;"/>
+    <HasRelation name="dao" source="Individuo.Individuo" target="Individuo.IndividuoDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="rh" source="bloodmanagement.FXMLRetirarBolsasController" target="bloodmanagementmodels.FatorRH" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;FatorRH&gt;"/>
+    <HasRelation name="ind" source="bloodmanagement.FXMLValidarUserController" target="Individuo.Individuo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sangue" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.TipoSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;TipoSangue&gt;"/>
+    <HasRelation name="database" source="Individuo.IndividuoDAO" target="database.DBConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obsSangue" source="bloodmanagement.FXMLRetirarBolsasController" target="bloodmanagementmodels.TipoSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ObservableList&lt;TipoSangue&gt;"/>
+    <HasRelation name="spUF" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.Estados" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="BolsaDeSangue.BolsaDeSangueDAO" target="model.IDAO"/>
+    <UseRelation source="Individuo.IndividuoDAO" target="Individuo.Individuo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dao" source="BolsaDeSangue.BolsaDeSangue" target="BolsaDeSangue.BolsaDeSangueDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="database.MySQLConnection" target="database.DBConnection"/>
+    <HasRelation name="sangue" source="Sangue.SangueDAO" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bolsaDeSangue" source="BolsaDeSangue.BolsaDeSangueDAO" target="BolsaDeSangue.BolsaDeSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="BolsaDeSangue.BolsaDeSangue" target="Sangue.SangueDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Sangue.Sangue" target="Sangue.SangueDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sOMais" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Individuo.Individuo" target="model.IDAO"/>
+    <HasRelation name="sABMais" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="individuo" source="Individuo.IndividuoDAO" target="Individuo.Individuo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="database" source="Sangue.SangueDAO" target="database.DBConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cbTipo" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.TipoSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obsSangue" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.TipoSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ObservableList&lt;TipoSangue&gt;"/>
+    <HasRelation name="sBMais" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Individuo.Individuo" target="Individuo.Individuo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obsRh" source="bloodmanagement.FXMLRetirarBolsasController" target="bloodmanagementmodels.FatorRH" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ObservableList&lt;FatorRH&gt;"/>
+    <HasRelation name="dao" source="Sangue.Sangue" target="Sangue.SangueDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cbTipo" source="bloodmanagement.FXMLRetirarBolsasController" target="bloodmanagementmodels.TipoSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sBMenos" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obsRh" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.FatorRH" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ObservableList&lt;FatorRH&gt;"/>
+    <HasRelation name="sAMais" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Sangue.SangueDAO" target="Sangue.Sangue" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sAMenos" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="AMais" source="bloodmanagement.FXMLRetirarBolsasController" target="BolsaDeSangue.BolsaDeSangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cbRH" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.FatorRH" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Sangue.SangueDAO" target="model.IDAO"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="BolsaDeSangue.BolsaDeSangue" target="model.IDAO"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Individuo.IndividuoDAO" target="model.IDAO"/>
+    <HasRelation name="sABMenos" source="bloodmanagement.FXMLRetirarBolsasController" target="Sangue.Sangue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cbRH" source="bloodmanagement.FXMLRetirarBolsasController" target="bloodmanagementmodels.FatorRH" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="obsEstados" source="bloodmanagement.FXMLCadastrar_UserController" target="bloodmanagementmodels.Estados" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ObservableList&lt;Estados&gt;"/>
+    <UseRelation source="Individuo.Individuo" target="Individuo.IndividuoDAO" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
